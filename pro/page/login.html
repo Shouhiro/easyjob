@@ -17,11 +17,11 @@
         <h2 class="ui teal image header"><img src="../images/logo.png" class="image">
           <div class="content">用户登录</div>
         </h2>
-        <form class="ui large form">
+        <form id="loginForm" class="ui large form">
           <div class="ui segment">
             <div class="field">
               <div class="ui left icon input"><i class="user icon"></i>
-                <input name="email" placeholder="用户名">
+                <input name="email" placeholder="邮箱账号">
               </div>
             </div>
             <div class="field">
@@ -35,7 +35,11 @@
         </form>
       </div>
     </div>
-    <script src="../js/vender/jquery-1.11.0.min.js"></script>
-    <script src="../js/vender/semantic.min.js"></script>
+    <script src="../js/vender/require/require.min.js"></script>
+    <script>
+      require(['../js/config/require-config.js'], function () {
+      	require(['login']);
+      });
+    </script>
   </body>
 </html>

@@ -15,17 +15,20 @@ html
 				h2.ui.teal.image.header
 					img.image(src='../images/logo.png')
 					.content 用户登录
-				form.ui.large.form
+				form#loginForm.ui.large.form
 					.ui.segment
 						.field
 							.ui.left.icon.input
 								i.user.icon
-								input(name='email', placeholder='用户名')
+								input(name='email', placeholder='邮箱账号')
 						.field
 							.ui.left.icon.input
 								i.lock.icon
 								input(type='password', name='password', placeholder='密码')
 						.ui.fluid.large.teal.submit.button 登录
 					.ui.error.message
-		script(src='../js/vender/jquery-1.11.0.min.js')
-		script(src='../js/vender/semantic.min.js')
+		script(src='../js/vender/require/require.min.js')
+		script.
+			require(['../js/config/require-config.js'], function () {
+				require(['login']);
+			});
