@@ -1,15 +1,17 @@
 var gulp = require('gulp'),
 	jade = require('gulp-jade'),
-    uglify = require('gulp-uglify');
+	babel = require("gulp-babel");
 
 
-gulp.task('default',['monitor']);
+gulp.task('default',['monitor','babel']);
 
-gulp.task('jsmin',function(){
+gulp.task('babel',function(){
 	return gulp
-	       		.src('js/gg.js')
-	            .pipe(uglify())
-	            .pipe(gulp.dest('dist/'));
+	       		.src('js/**/*.js')
+	       		.pipe(babel({
+	       			minified:true
+	       		}))
+	            .pipe(gulp.dest('../pro/js/'));
 });
 
 gulp.task('jade',function(){
@@ -22,6 +24,6 @@ gulp.task('jade',function(){
 });
 
 gulp.task('monitor',function(){
-	gulp.watch('js/*.js',['jsmin']);
+	gulp.watch('js/**/*.js',['babel']);
 	gulp.watch('pages/*.jade',['jade']);
 });
