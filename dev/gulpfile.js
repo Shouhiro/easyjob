@@ -9,7 +9,7 @@ gulp.task('babel',function(){
 	return gulp
 	       		.src('js/**/*.js')
 	       		.pipe(babel({
-	       			minified:true
+	       			// minified:true
 	       		}))
 	            .pipe(gulp.dest('../pro/js/'));
 });

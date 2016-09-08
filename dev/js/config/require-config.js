@@ -9,10 +9,14 @@ requirejs.config({
         },
         "login": {
             deps: ["jquery","semantic","react","reactDOM"]
+        },
+        "gittest":{
+            deps:["jquery","semantic"]
         }
     },
     paths: {
         "login":"view/login.view",
+        "gittest":"view/gittest.view",
 
         "jquery":"vender/jquery/jquery-3.1.0.min",
         "semantic":"vender/semantic/semantic.min",
