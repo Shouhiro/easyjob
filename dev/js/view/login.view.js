@@ -5,9 +5,6 @@ define(function(){
 			email:{
 				identifier:'email',
 				rules:[{
-					type:'empty',
-					prompt:'请输入邮箱账号'
-				},{
 					type:'email',
 					prompt:'请输入正确的邮箱账号'
 				}]
