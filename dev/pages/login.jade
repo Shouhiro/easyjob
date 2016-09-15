@@ -1,21 +1,15 @@
 doctype html
 html
 	head
-		meta(charset="utf-8")
-		meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0")
-		title easyjob for you!
-		link(rel='stylesheet',href='../css/vender/semantic/semantic.min.css')
-		style.
-			body{background-color: #fefefe;}
-			.column{max-width:600px;padding:0 30px !important;}
-			.grid{height:100%;}
+		include common/_header.jade
+		link(rel='stylesheet',href='../css/view/login/login.view.css')
 	body
 		.ui.middle.aligned.center.aligned.grid
 			.column
 				h2.ui.teal.image.header
 					img.image(src='../images/logo.png')
 					.content 用户登录
-				form#loginForm.ui.large.form
+				form#loginForm.ui.large.form(method="post")
 					.ui.segment
 						.field
 							.ui.left.icon.input
@@ -27,8 +21,7 @@ html
 								input(type='password', name='password', placeholder='密码')
 						.ui.fluid.large.teal.submit.button 登录
 					.ui.error.message
-		script(src='../js/vender/require/require.min.js')
 		script.
-			requirejs(['../js/config/require-config.js'], function () {
+			requirejs(['../js/config/require-config.js'], function(){
 				requirejs(['login']);
 			});
