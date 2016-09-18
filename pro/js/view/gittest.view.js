@@ -1,5 +1,1 @@
-'use strict';
-
-define(function () {
-  $('.ui.sidebar').sidebar('attach events', '.toc.item');
-});
+'use strict';define(function(){$('.ui.sidebar').sidebar('attach events','.toc.item')});
