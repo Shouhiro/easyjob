@@ -1,0 +1,60 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible",content="IE=edge,chrome=1")
+		meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0")
+		link(rel="stylesheet",href="../css/vender/semantic/semantic.min.css")
+		style.
+			.secondary{background-color:black !important}
+			.pusher .menu .toc.item{display: none;}
+			@media only screen and (max-width: 700px) {
+				.pushable .pusher .menu .toc.item{display: block;}
+				.pushable .pusher .menu a.item{display: none;}}
+	body
+		.ui.sidebar.inverted.vertical.menu
+			a.item.active Home
+			a.item Work
+			a.item Company
+			a.item Login
+			a.item Signup
+		.pusher
+			.ui.large.secondary.inverted.pointing.menu
+				a.toc.item
+					i.sidebar.icon.visible-xs
+				a.item.active Home
+				a.item Work
+				a.item Company
+				a.item Login
+				a.item Signup
+			.ui.vertical.stripe.segment
+				.ui.middle.aligned.stackable.grid.container
+					.row
+						.eight.wide.column
+							h3.ui.header We Help Companies and Companions
+							p We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.
+							h3.ui.header We Make Bananas That Can Dance
+							p Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.
+					.row
+						.eight.wide.column
+							h3.ui.header We Help Companies and Companions
+							p We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.
+							h3.ui.header We Make Bananas That Can Dance
+							p Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.
+					.row
+						.eight.wide.column
+							h3.ui.header We Help Companies and Companions
+							p We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.
+							h3.ui.header We Make Bananas That Can Dance
+							p Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.
+					.row
+						.eight.wide.column
+							h3.ui.header We Help Companies and Companions
+							p We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.
+							h3.ui.header We Make Bananas That Can Dance
+							p Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.
+		script(src='../js/vender/require/require.min.js')
+		script.
+			requirejs(['../js/config/require-config.js'], function () {
+				requirejs(['gittest']);
+			});
